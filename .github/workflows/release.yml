@@ -1,0 +1,19 @@
+name: release
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'action.yml'
+      - 'functions/**'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    name: 'Publish a new release'
+    steps:
+
+    - uses: arwynfr/actions-conventional-versioning@0.2.1
+      with:
+        pattern: ''

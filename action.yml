@@ -1,0 +1,27 @@
+name: 'Sign Arma 3 mods'
+description: 'Creates a BI key and signs a mod using Arma 3 Tools'
+author: ArwynFr
+branding:
+  icon: award
+  color: gray-dark
+inputs:
+
+  target:
+    description: 'Path to the directory that is the mod root'
+    required: true
+
+  keyname:
+    description: 'Name of the authority for key pair creation'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+
+    - shell: pwsh
+      run: |
+        $ActionArgs = @{
+          ModPath = '${{ inputs.target }}'
+          KeyName = '${{ inputs.keyname }}'
+        }
+        ${{ github.action_path }}/functions/Sign-Directory.ps1 @ActionArgs       

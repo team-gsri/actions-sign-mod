@@ -1,0 +1,27 @@
+= Github Actions: Sign Arma 3 Mod
+
+This action creates a BI key and signs a mod, using Arma 3 Tools.
+
+CAUTION: **This action can only be used on Windows runners** and requires installation of the Arma 3 Tools. This requires you to agree to the Steam EULA, Arma 3 EULA, and BI Tools EULA. You can install the arma 3 tools using steamcmd.
+
+== Usage and contributing
+
+* See link:.github/USAGE.adoc[usage guide] for details
+
+== Rules and standards
+
+The following documents provide additional informations on rules and standards applying to this project :
+
+* link:LICENSE[MIT License]
+* https://www.bohemia.net/community/licenses/bohemia-interactives-tools-end-user-license[BI Tools EULA]
+* https://www.bohemia.net/community/licenses/arma3-end-user-license[BI Arma 3 EULA]
+* https://github.com/team-gsri/.github/blob/master/CODE_OF_CONDUCT.md[GSRI Code of conduct]
+* https://github.com/team-gsri/.github/blob/master/SECURITY.md[GSRI Security policy]
+* https://github.com/team-gsri/.github/blob/master/SUPPORT.md[GSRI Support policy]
+* https://github.com/team-gsri/.github/blob/master/CONTRIBUTING.md[GSRI Contribution guide]
+
+== Disclaimer
+
+This application or website is not affiliated or authorized by Bohemia Interactive a.s. Bohemia Interactive, ARMA, DAYZ and all associated logos and designs are trademarks or registered trademarks of Bohemia Interactive a.s.
+
+The GSRI logo is a trademark of GSRI.

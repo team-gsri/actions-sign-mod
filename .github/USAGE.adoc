@@ -1,0 +1,45 @@
+= Github Actions: Sign Arma 3 Mod: Usage
+:toc: preamble
+
+This document describes how to use the `team-gsri/actions-sign-mod` Github action.
+
+== Requirements and limitations
+
+This action requires :
+
+* Arma 3 Tools
+* Powershell 7+
+
+CAUTION: **This action can only be used on Windows runners** and requires installation of the Arma 3 Tools. This requires you to agree to the Steam EULA, Arma 3 EULA, and BI Tools EULA. You can install the arma 3 tools using steamcmd.
+
+== Installation
+
+* Download and install https://store.steampowered.com/app/233800/Arma_3_Tools/[Arma 3 Tools]
+* Set a machine environment variable `ARMA3TOOLS` with the path to the tools directory
+
+TIP: You can also use https://developer.valvesoftware.com/wiki/SteamCMD[Steamcmd] to download, install, and update the Arma 3 Tools without the Steam client. In both case, you need a valid steam account with subscription to the Arma 3 Tools in order to accept EULAs, but you don't need to own the game itself.
+
+== Inputs
+
+=== `target`
+
+**Required.** Path to a directory containing the mod files to sign, relative to the repository root.
+
+=== `keyname`
+
+**Required.** Name of the Bohemia Interactive authority used for signature. Recommended to include TAG, mod name, and version.
+
+== Outputs
+
+*There is no output*
+
+== Example
+
+This example will sign content of `mod/gsri-gear` using a key named GSRI-Gear-1.0.1:
+
+```yml
+uses: team-gsri/actions-sign-mod@0.0.1
+with:
+  target: 'mod/gsri-gear'
+  keyname: 'GSRI-Gear-1.0.1'
+```
